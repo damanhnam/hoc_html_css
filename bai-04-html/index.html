@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Ví dụ Đơn Giản: CSS Selectors</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+
+<body>
+
+    <!-- PHẦN 1: CHA CON -->
+    <div class="box child-demo">
+        <h2>1. Cha Con (.box)</h2>
+
+        <p>Tôi là CON TRỰC TIẾP (Dấu >) -> Màu Đỏ.</p>
+
+        <div style="border: 1px dashed gray; padding: 10px; margin: 10px 0;">
+            <p>Tôi là CHÁU (Nằm trong div con) -> Chỉ màu Xám.</p>
+        </div>
+
+        <p>Tôi cũng là CON TRỰC TIẾP -> Màu Đỏ.</p>
+    </div>
+
+
+    <!-- PHẦN 2: ANH EM -->
+    <div class="box">
+        <h2>2. Anh Em</h2>
+        <p>Đoạn văn này nằm TRƯỚC mốc -> Không bị ảnh hưởng.</p>
+
+        <h3 class="moc">--- ĐÂY LÀ CỘT MỐC (.moc) ---</h3>
+
+        <p>Tôi là P nằm NGAY SAU mốc (Dấu +) -> Nền Vàng.</p>
+
+        <span>Tôi là Span nằm sau mốc (Dấu ~) -> Chữ Xanh.</span>
+
+        <p>Tôi là P nhưng xa mốc -> Chỉ màu xám thường.</p>
+
+        <span>Tôi cũng là Span nằm sau mốc (Dấu ~) -> Chữ Xanh.</span>
+    </div>
+
+
+    <!-- PHẦN 3: THỨ TỰ -->
+    <div class="box">
+        <h2>3. Thứ Tự (List)</h2>
+        <ul>
+            <li>Dòng 1: Con đầu lòng (:first-child) -> Tím</li>
+            <li>Dòng 2: Số chẵn (:nth-child(even)) -> Nền xám</li>
+            <li>Dòng 3: Số lẻ bình thường</li>
+            <li>Dòng 4: Số chẵn (:nth-child(even)) -> Nền xám</li>
+            <li>Dòng 5: Con út (:last-child) -> Cam</li>
+        </ul>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,73 @@
+.box {
+    border: 2px solid #333;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 8px;
+}
+
+h2 {
+    margin-top: 0;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 10px;
+}
+
+/* =========================================
+   1. QUAN HỆ CHA - CON (Combinators)
+   ========================================= */
+
+/* Space (dấu cách) = Hậu duệ (Con, Cháu, Chắt...) */
+.box p {
+    color: #666;
+    /* Màu xám cho tất cả */
+}
+
+/* Dấu > = Con trực tiếp (Con ruột) */
+.box.child-demo>p {
+    color: red;
+    /* Ghi đè màu đỏ cho con ruột */
+    font-weight: bold;
+}
+
+
+/* =========================================
+   2. QUAN HỆ ANH EM (Siblings)
+   ========================================= */
+
+/* Dấu + = Anh em LIỀN KỀ (Ngay sát phía sau) */
+.moc+p {
+    background-color: yellow;
+    /* Chỉ đoạn văn ngay sau mốc */
+}
+
+/* Dấu ~ = Tất cả anh em PHÍA SAU */
+.moc~span {
+    color: blue;
+    display: block;
+    margin-top: 5px;
+}
+
+
+/* =========================================
+   3. THỨ TỰ (Pseudo-classes)
+   ========================================= */
+
+ul li {
+    padding: 5px;
+}
+
+/* Con đầu tiên */
+ul li:first-child {
+    color: purple;
+    font-weight: bold;
+}
+
+/* Con cuối cùng */
+ul li:last-child {
+    color: orange;
+    font-weight: bold;
+}
+
+/* Các dòng chẵn (2, 4, 6...) */
+ul li:nth-child(even) {
+    background-color: #eee;
+}

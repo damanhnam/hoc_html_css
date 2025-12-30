@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ví dụ BEM Đơn Giản</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+
+        /* --- Block: Card --- */
+        .card {
+            background: white;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 20px;
+            max-width: 300px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+
+        /* Element: Title */
+        .card__title {
+            margin-top: 0;
+            color: #333;
+            font-size: 1.25rem;
+        }
+
+        /* Element: Content */
+        .card__description {
+            color: #666;
+            line-height: 1.5;
+            margin-bottom: 15px;
+        }
+
+        /* --- Block: Button --- */
+        .btn {
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 1rem;
+            transition: opacity 0.2s;
+        }
+
+        .btn:hover {
+            opacity: 0.5;
+        }
+
+        /* Modifier: Primary */
+        .btn--primary {
+            background-color: #007bff;
+            color: white;
+        }
+
+        /* Modifier: Danger */
+        .btn--danger {
+            background-color: #dc3545;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Minh họa BEM (Block Element Modifier)</h1>
+
+    <!-- Instance 1: Card bình thường -->
+    <div class="card">
+        <h2 class="card__title">Khóa học HTML/CSS</h2>
+        <p class="card__description">Học cách xây dựng giao diện web từ cơ bản đến nâng cao với tư duy BEM.</p>
+        <button class="btn btn--primary">Đăng ký ngay</button>
+    </div>
+
+    <!-- Instance 2: Card cảnh báo -->
+    <div class="card">
+        <h2 class="card__title">Xóa tài khoản</h2>
+        <p class="card__description">Hành động này sẽ xóa vĩnh viễn dữ liệu của bạn. Hãy cân nhắc kỹ.</p>
+        <button class="btn btn--danger">Xóa vĩnh viễn</button>
+    </div>
+
+</body>
+
+</html>
