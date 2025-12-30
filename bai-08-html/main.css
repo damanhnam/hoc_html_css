@@ -1,0 +1,106 @@
+.box {
+    width: 100%;
+    height: 120px;
+    background-color: red;
+    position: relative;
+}
+
+.box-child {
+    background-color: rgba(255, 255, 255, 0.5);
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+}
+
+ol {
+    height: 300px;
+    display: flex;
+    gap: 30px;
+}
+
+.header {
+    height: 50px;
+    width: 100%;
+    background-color: green;
+    position: fixed;
+    bottom: 0px;
+    left: 0px;
+    z-index: 1000;
+}
+
+/* Transform & Transition (Đơn giản: Hover vào thì phóng to) */
+.box-transform {
+    width: 100px;
+    height: 100px;
+    background-color: blue;
+    color: white;
+    margin: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    /* Hiệu ứng mượt mà trong 1 giây */
+    transition: all 1s;
+}
+
+.box-transform:hover {
+    /* Phóng to lên 1.2 lần */
+    transform: scale(1.2);
+    background-color: purple;
+    cursor: pointer;
+}
+
+/* Animation (Đơn giản: Di chuyển qua phải) */
+.box-animation {
+    width: 100px;
+    height: 100px;
+    background-color: orange;
+    color: white;
+    margin: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    /* Chạy animation tên 'di-chuyen' trong 2s, lặp lại vô hạn */
+    animation: di-chuyen 2s infinite alternate;
+}
+
+@keyframes di-chuyen {
+    from {
+        margin-left: 0;
+    }
+
+    to {
+        margin-left: 200px;
+    }
+}
+
+/* Pseudo-elements (Đơn giản: Thêm dấu * trước và sau) */
+.box-pseudo {
+    width: 200px;
+    height: 50px;
+    background-color: #ddd;
+    margin: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.box-pseudo::before {
+    content: "★ ";
+    /* Thêm ngôi sao đằng trước */
+    color: red;
+    font-size: 20px;
+    margin-right: 10px;
+}
+
+.box-pseudo::after {
+    content: " ★";
+    /* Thêm ngôi sao đằng sau */
+    color: red;
+    font-size: 20px;
+    margin-left: 10px;
+}
