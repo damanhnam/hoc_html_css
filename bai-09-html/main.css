@@ -1,0 +1,86 @@
+/* Khai báo biến ở đây (Gốc) */
+:root {
+    --mau-chinh: blue;
+    --mau-phu: orange;
+    --co-chu: 20px;
+}
+
+body {
+    /* Dùng biến */
+    color: var(--mau-chinh);
+    padding: 20px;
+}
+
+.tieu-de {
+    background-color: var(--mau-phu);
+    color: white;
+    padding: 10px;
+}
+
+.nut-bam {
+    background-color: var(--mau-chinh);
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    font-size: var(--co-chu);
+    cursor: pointer;
+}
+
+/* Các đơn vị đo */
+.hop-px {
+    width: 200px;
+    height: 50px;
+    background-color: #ccc;
+    margin-bottom: 10px;
+    border: 1px solid black;
+}
+
+.hop-phan-tram {
+    width: 50%;
+    /* Một nửa chiều rộng của body */
+    height: 50px;
+    background-color: #ddd;
+    margin-bottom: 10px;
+    border: 1px solid black;
+}
+
+.hop-vw {
+    width: 50vw;
+    /* Một nửa chiều rộng màn hình máy tính */
+    height: 50px;
+    background-color: #eee;
+    border: 1px solid black;
+}
+
+.doan-van-cha {
+    font-size: 20px;
+    /* Cha */
+    border: 1px solid blue;
+    margin-top: 20px;
+    padding: 10px;
+}
+
+.doan-van-con {
+    font-size: 2em;
+    /* 2 lần cha = 40px */
+    color: red;
+}
+
+/* Hàm tính toán calc */
+.tinh-toan {
+    height: 50px;
+    background-color: pink;
+    /* Lấy 100% trừ đi 100px */
+    width: calc(100% - 100px);
+    line-height: 50px;
+    /* Căn giữa chữ theo chiều dọc */
+    text-align: center;
+}
+
+/* Hàm lấy thuộc tính attr */
+.hien-thi-nd::after {
+    /* Lấy cái dòng chữ trong data-text hiện ra */
+    content: attr(data-text);
+    color: green;
+    font-weight: bold;
+}
